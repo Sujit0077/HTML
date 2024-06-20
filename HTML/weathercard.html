@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #ebebeb;
+        }
+        .card{
+            display:block;
+            /* justify-content: center; */
+            /* align-items: center; */
+            /* background: #4b4545; */
+            border: 3px solid black;
+            width: 20%;
+            height: 200px;
+            margin: 20px;
+            box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.365);
+        }
+        .icon{
+            width: 30px;
+            height: 100px;
+            /* background-color: white; */
+            border-radius: 50%;
+            display: flex;
+            padding-left: 100px;
+
+ 
+        }
+        .place{
+            font-size: 15px;
+            color: rgb(0, 136, 255);
+            text-align: center;
+        }
+        h1{
+            font-weight: bold;
+            font: 2rem sans-serif;
+
+        }
+        .values{
+            display: flex;
+            justify-self: center;
+            align-items: center;
+            /* margin-left: 80px; */
+            margin-top: 5px;
+            justify-content: space-between;
+        }
+        .max{
+            font-size: 25px;
+            color: rgb(14, 88, 154);
+            margin-left: 30px;
+        }
+        .min{
+            font-size: 25px;
+            color: rgb(13, 97, 171);
+            margin-right: 30px;
+        }
+        
+
+        
+       
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="icon">
+            <img src="data:image/png;base64,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" alt="Climate">
+
+
+
+
+        </div>
+        <div class="place">
+            <h1>Delhi</h1>
+        </div>
+        <div class="values">
+            <div class="max">
+                <p>
+                    <i class="fa fa-thermometer-full" aria-hidden="true"></i>
+
+                    34<sup>o</sup>C
+                </p>
+            </div>
+            <div class="min">
+                <p>
+                    <i class="fa fa-thermometer-half" aria-hidden="true"></i>
+
+                    16<sup>o</sup>C
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
